@@ -6,21 +6,23 @@ import matplotlib.pyplot as plt
 from collections import Counter
 from sklearn.decomposition import PCA
 
+
+# load samples and labels
 grey_scale_samples_and_category_ids_npz_file = "./projectData/grey_scale_samples_and_category_ids.npz"
 
 grey_scale_samples_and_category_ids_dic = np.load(grey_scale_samples_and_category_ids_npz_file)
 
+# get samples and labels from dic
 X = grey_scale_samples_and_category_ids_dic['grey_scale_samples']
 X = scale(X)
 y = grey_scale_samples_and_category_ids_dic['category_ids']
 
 
-
+# label/category ids
 bird = 0 # id 0
-coyote = 20 # id 20
 bear = 22 # id 22
 
-
+# list of wanted labels
 wanted = [bear, bird]
 
 # make new sample matrix and category array (X,y) but only include
@@ -42,6 +44,7 @@ n_catagories = 2
 kmeans = KMeans(n_clusters=n_catagories, random_state=12, n_init=10)
 predictions = kmeans.fit_predict(new_X)
 
+# used to color code labels (23 colors if needed)
 color_themes = np.array(['black',
                          'red',
                          'orange',
@@ -71,7 +74,8 @@ feature_0 = new_X[:,0]
 feature_1 = new_X[:,1]
 fig, axs = plt.subplots(2)
 
-# plot these so you can visuallly see how to reorder
+# plot these initially so you can visually see how to reorder
+# since K-means uses random labels that must be correcly matched afterwards
 # axs[0].scatter(x=feature_0, y=feature_1, c = color_themes[new_y])
 # axs[1].scatter(x=feature_0, y=feature_1, c = color_themes[predictions])
 
