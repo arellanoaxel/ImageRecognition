@@ -1,3 +1,6 @@
+# file: KMeans.py 
+# Description: This file uses KMeans clustering
+# Edited: by Ben Barber
 import numpy as np
 from sklearn.cluster import KMeans
 from sklearn.metrics import accuracy_score
@@ -5,7 +8,6 @@ from sklearn.preprocessing import scale
 import matplotlib.pyplot as plt
 from collections import Counter
 from sklearn.decomposition import PCA
-
 
 # load samples and labels
 grey_scale_samples_and_category_ids_npz_file = "./projectData/grey_scale_samples_and_category_ids.npz"
