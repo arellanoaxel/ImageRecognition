@@ -22,5 +22,7 @@ The dataset used in this project is sourced from [LILA Science](https://lila.sci
    - Ensure that the algorithms are applied only on the preprocessed data.
 ## Contributors
 Axel Arellano  PID:  aarellano
+
 Ben Barber     PID:  bwb1372  
+
 Jordan Boyle   PID:  jboyle1013
