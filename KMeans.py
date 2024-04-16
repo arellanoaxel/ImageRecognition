@@ -1,6 +1,18 @@
 # file: KMeans.py 
 # Description: This file uses KMeans clustering
 # Edited: by Ben Barber
+
+
+
+
+
+
+
+
+
+
+
+
 import numpy as np
 from sklearn.cluster import KMeans
 from sklearn.metrics import accuracy_score
