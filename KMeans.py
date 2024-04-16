@@ -114,10 +114,10 @@ y_min, y_max = reduced_data[:, 1].min() - 1, reduced_data[:, 1].max() + 1
 
 xx, yy = np.meshgrid(np.arange(x_min, x_max, h), np.arange(y_min, y_max, h))
 
-# labels for each point in mesh
+# create points 
 Z = kmeans.predict(np.c_[xx.ravel(), yy.ravel()])
 
-# color plot
+# color coordinates 
 Z = Z.reshape(xx.shape)
 plt.figure(1)
 plt.clf()
